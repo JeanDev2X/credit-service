@@ -1,4 +1,4 @@
-package com.bank.credit.service.exception;
+package bank.credit.exception;
 
 
 public class RequestException extends RuntimeException {

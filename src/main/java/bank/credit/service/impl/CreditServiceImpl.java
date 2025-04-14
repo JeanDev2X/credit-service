@@ -1,4 +1,4 @@
-package com.bank.credit.service.service.impl;
+package bank.credit.service.impl;
 
 
 import java.math.BigDecimal;
@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.bank.credit.service.entity.Credit;
-import com.bank.credit.service.repository.CreditRepository;
-import com.bank.credit.service.service.CreditService;
+import bank.credit.entity.Credit;
+import bank.credit.repository.CreditRepository;
+import bank.credit.service.CreditService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
