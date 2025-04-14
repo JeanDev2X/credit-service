@@ -9,8 +9,8 @@
 		<version>3.1.7</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>spring.boot.webflu.ms.cuenta.banco</groupId>
-	<artifactId>spring-boot-webflu-ms-cuenta-credito</artifactId>
+	<groupId>bank.credit</groupId>
+	<artifactId>bank.credit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>credit-service</name>
 	<description>Demo project for Spring Boot</description>

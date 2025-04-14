@@ -1,12 +1,12 @@
-package com.bank.credit.service.controllers;
+package bank.credit.controllers;
 
 import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.bank.credit.service.dto.CreditResponse;
-import com.bank.credit.service.entity.Credit;
-import com.bank.credit.service.service.CreditService;
+import bank.credit.dto.CreditResponse;
+import bank.credit.entity.Credit;
+import bank.credit.service.CreditService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

@@ -1,4 +1,4 @@
-package com.bank.credit.service.dto;
+package bank.credit.dto;
 
 import lombok.Builder;
 import lombok.Data;

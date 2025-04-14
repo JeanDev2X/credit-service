@@ -1,4 +1,4 @@
-package spring.boot.webflu.ms.cuenta.credito.app;
+package bank.credit;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @AutoConfigureWebTestClient
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-class SpringBootWebfluMsCuentaCreditoApplicationTests {
+class CreditApplicationTests {
 	
 	@Autowired
 	private WebTestClient client;

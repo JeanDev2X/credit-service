@@ -1,8 +1,8 @@
-package com.bank.credit.service.service;
+package bank.credit.service;
 
 import java.math.BigDecimal;
 
-import com.bank.credit.service.entity.Credit;
+import bank.credit.entity.Credit;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
