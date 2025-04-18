@@ -13,4 +13,5 @@ public interface CreditCardService {
     Mono<CreditCard> getByCardNumber(String cardsNumber);
     Mono<CreditCard> chargeCreditCard(String cardsNumber, BigDecimal amount);
     public Mono<CreditCard> payCreditCard(String cardsNumber, BigDecimal amount);
+    Flux<CreditCard> findByDocumentNumber(String documentNumber);
 }

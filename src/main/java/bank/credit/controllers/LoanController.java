@@ -77,4 +77,14 @@ public class LoanController {
         return creditCardService.payCreditCard(cardsNumber, amount);
     }
     
+    @GetMapping("/by-document/{documentNumber}")
+    public Flux<Loan> getLoansByDocument(@PathVariable String documentNumber) {
+        return loanService.findByDocumentNumber(documentNumber);
+    }
+    
+    @GetMapping("/credit-cards/by-document/{documentNumber}")
+    public Flux<CreditCard> getCreditCardsByDocument(@PathVariable String documentNumber) {
+        return creditCardService.findByDocumentNumber(documentNumber);
+    }
+    
 }

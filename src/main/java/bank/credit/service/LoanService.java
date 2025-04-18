@@ -15,4 +15,6 @@ public interface LoanService {
 	Mono<Loan> getByCreditNumber(String creditNumber);
 
 	Mono<Loan> payLoan(String creditNumber, BigDecimal amount);
+	
+	Flux<Loan> findByDocumentNumber(String documentNumber);
 }
