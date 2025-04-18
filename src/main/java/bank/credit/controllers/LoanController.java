@@ -1,6 +1,7 @@
 package bank.credit.controllers;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -85,6 +86,22 @@ public class LoanController {
     @GetMapping("/credit-cards/by-document/{documentNumber}")
     public Flux<CreditCard> getCreditCardsByDocument(@PathVariable String documentNumber) {
         return creditCardService.findByDocumentNumber(documentNumber);
+    }
+    
+    //proy 3
+    
+    @GetMapping("/has-overdue-loans/{documentNumber}")
+    public Mono<Boolean> hasOverdueLoans(@PathVariable String documentNumber) {
+        return loanService.findByDocumentNumber(documentNumber)
+                .filter(loan -> loan.getBalance().compareTo(BigDecimal.ZERO) > 0)
+                .any(loan -> loan.getStartDate().isBefore(LocalDate.now().minusDays(30))); // deuda vencida si han pasado 30 días
+    }
+    
+    @GetMapping("/has-overdue-credit-cards/{documentNumber}")
+    public Mono<Boolean> hasOverdueCreditCards(@PathVariable String documentNumber) {
+        return creditCardService.findByDocumentNumber(documentNumber)
+                .filter(card -> card.getBalance().compareTo(BigDecimal.ZERO) > 0)
+                .any(card -> card.getDueDate() != null && card.getDueDate().isBefore(LocalDate.now()));
     }
     
 }
