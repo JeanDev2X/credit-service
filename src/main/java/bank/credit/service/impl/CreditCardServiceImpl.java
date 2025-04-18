@@ -84,4 +84,8 @@ public class CreditCardServiceImpl implements CreditCardService {
 			return creditCardRepository.save(card);
 		});
 	}
+	
+	public Flux<CreditCard> findByDocumentNumber(String documentNumber) {
+	    return creditCardRepository.findByDocumentNumber(documentNumber);
+	}
 }

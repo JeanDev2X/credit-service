@@ -79,5 +79,9 @@ public class LoanServiceImpl implements LoanService {
 	                return loanRepository.save(loan);
 	            });
 	}
+	
+	public Flux<Loan> findByDocumentNumber(String documentNumber) {
+	    return loanRepository.findByDocumentNumber(documentNumber);
+	}
 
 }
