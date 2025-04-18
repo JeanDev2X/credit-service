@@ -10,4 +10,5 @@ import reactor.core.publisher.Mono;
 public interface LoanRepository extends ReactiveMongoRepository<Loan, String>{
 	Mono<Loan> findByDocumentNumberAndType(String documentNumber, LoanType type);
     Mono<Loan> findByCreditNumber(String creditNumber);
+    Flux<Loan> findByDocumentNumber(String documentNumber);
 }
