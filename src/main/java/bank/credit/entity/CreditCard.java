@@ -24,4 +24,5 @@ public class CreditCard {
     private BigDecimal balance;
     private CardOwnerType ownerType; // PERSONAL, BUSINESS
     private LocalDate issueDate;
+    private LocalDate dueDate; // Fecha límite de pago
 }
