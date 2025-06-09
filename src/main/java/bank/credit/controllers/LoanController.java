@@ -88,7 +88,7 @@ public class LoanController {
         return creditCardService.findByDocumentNumber(documentNumber);
     }
     
-    //proy 3
+    //proy 3:prestas vencidos
     
     @GetMapping("/has-overdue-loans/{documentNumber}")
     public Mono<Boolean> hasOverdueLoans(@PathVariable String documentNumber) {
@@ -96,7 +96,7 @@ public class LoanController {
                 .filter(loan -> loan.getBalance().compareTo(BigDecimal.ZERO) > 0)
                 .any(loan -> loan.getStartDate().isBefore(LocalDate.now().minusDays(30))); // deuda vencida si han pasado 30 días
     }
-    
+    //proy 3:tarjeta credito vencidos
     @GetMapping("/has-overdue-credit-cards/{documentNumber}")
     public Mono<Boolean> hasOverdueCreditCards(@PathVariable String documentNumber) {
         return creditCardService.findByDocumentNumber(documentNumber)

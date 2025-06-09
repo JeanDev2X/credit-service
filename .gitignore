@@ -7,6 +7,7 @@ target/
 *.classpath
 *.project
 .settings/
+.factorypath
 
 # Ignore log files
 *.log
@@ -23,9 +24,38 @@ Thumbs.db
 *.war
 *.ear
 
+# Logs
+*.log
+
+# Archivos generados por Maven
+/logs/
+mvnw
+mvnw.cmd
+
+
 # Ignore application configuration files
 
 
 # Ignore compiled classes and package files
 *.class
+
+# Archivos de pruebas de cobertura y reportes
+/coverage/
+jacoco.exec
+*.ec
+*.exec
+/site/
+
+# Variables de entorno o secretos
+.env
+application-local.properties
+application-dev.properties
+application-test.properties
+
+# Otros archivos comunes
+*.swp
+*.bak
+*.tmp
+*.orig
+*.rej
 
